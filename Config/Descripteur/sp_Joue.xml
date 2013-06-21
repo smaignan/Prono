@@ -1,0 +1,19 @@
+<Procedure>
+	<Instruction>
+		delete from JOURNEE_UTILISATEUR
+		where
+			juti_uti_id = @IdUtilisateur and 
+			juti_jou_id = @IdJournee;\
+		
+		insert into JOURNEE_UTILISATEUR
+		(juti_uti_id, juti_jou_id, juti_fil_rouge, juti_points, juti_aveugle)
+		values
+		(@IdUtilisateur, @IdJournee, @FilRouge, null, @GrilleAveugle);
+	</Instruction>
+	<Input>
+		<Parameter Name="IdJournee" Type="I" />
+		<Parameter Name="IdUtilisateur" Type="I" />
+		<Parameter Name="FilRouge" Type="B" />
+		<Parameter Name="GrilleAveugle" Type="B" />
+	</Input>
+</Procedure>

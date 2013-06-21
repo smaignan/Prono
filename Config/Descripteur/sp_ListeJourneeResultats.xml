@@ -1,0 +1,6 @@
+<Procedure>
+	<Instruction>
+		SELECT * FROM JOURNEE where jou_diffuser_resultats = true order by jou_date
+	</Instruction>
+	<Input />
+</Procedure>

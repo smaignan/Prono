@@ -1,0 +1,11 @@
+<Procedure>
+	<Instruction>
+		SELECT r.*, e.equ_id, e.equ_nom, v.equ_id as equ_id_v, v.equ_nom as equ_nom_v FROM RENCONTRE r
+			INNER JOIN EQUIPE e on r.ren_equ_id = e.equ_id
+			INNER JOIN EQUIPE v on r.ren_equ_id_v = v.equ_id
+		WHERE REN_JOU_ID = @IdJournee order by ren_id
+	</Instruction>
+	<Input>
+		<Parameter Name="IdJournee" Type="I" />
+	</Input>
+</Procedure>

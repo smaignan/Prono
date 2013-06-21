@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="php_newtype_context" deleted="false" description="Newly created PHP files" enabled="true" id="net.sourceforge.phpdt.ui.text.codetemplates.newtype" name="newtype">&lt;?php
+/*
+ *    fichier   :    predyn.php
+ *    version   :    1.0
+ *    auteur    :    SMN
+ *    date      :    $(date)
+ *
+ *    description       :
+ *    modifictation     :       auteur 		date	modification
+ */
+?&gt;
+</template></templates>

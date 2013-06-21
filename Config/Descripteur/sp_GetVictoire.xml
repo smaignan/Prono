@@ -1,0 +1,13 @@
+<Procedure>
+	<Instruction>
+	<![CDATA[
+		 SELECT COUNT(*) as nb FROM PRONOSTIC
+			INNER JOIN RENCONTRE ON PRO_REN_ID = REN_ID
+			INNER JOIN JOURNEE_UTILISATEUR ON REN_JOU_ID = JUTI_JOU_ID AND PRO_UTI_ID = JUTI_UTI_ID AND JUTI_AVEUGLE = 0
+		WHERE PRO_REN_ID = @Id AND PRO_PRONO > PRO_PRONO_V
+	]]>
+	</Instruction>
+	<Input>
+		<Parameter Name="Id" Type="I" />
+	</Input>
+</Procedure>

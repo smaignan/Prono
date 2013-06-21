@@ -1,0 +1,6 @@
+<Procedure>
+	<Instruction>
+		select * from JOURNEE where jou_date = (select max(jou_date) from JOURNEE where jou_diffuser_pronostics = true);
+	</Instruction>
+	<Input />
+</Procedure>

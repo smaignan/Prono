@@ -1,0 +1,8 @@
+<Procedure>
+	<Instruction>
+		Call sp_CalculRisque(@IdJournee)
+	</Instruction>
+	<Input>
+		<Parameter Name="IdJournee" Type="I" />
+	</Input>
+</Procedure>

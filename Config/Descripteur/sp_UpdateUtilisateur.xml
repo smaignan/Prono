@@ -1,0 +1,29 @@
+<Procedure>
+	<Instruction>
+		UPDATE UTILISATEUR SET 
+			UTI_NOM = @Nom, 
+			UTI_PRENOM = @Prenom, 
+			UTI_PSEUDO = @Pseudo, 
+			UTI_MAIL = @Mail,
+			UTI_MAIL2 = @Mail2,
+			UTI_LOGIN = @Login, 
+			UTI_PASSWORD = @Password,
+			UTI_BONUS = @Bonus,
+			UTI_MALUS = @Malus,
+			UTI_ADMIN = @Admin
+		WHERE UTI_ID = @Id
+	</Instruction>
+	<Input>
+		<Parameter Name="Id" Type="I" />
+		<Parameter Name="Nom" Type="VA" Length="50" />
+		<Parameter Name="Prenom" Type="VA" Length="50" />
+		<Parameter Name="Pseudo" Type="VA" Length="50" />
+		<Parameter Name="Mail2" Type="VA" Length="100" />
+		<Parameter Name="Mail" Type="VA" Length="100" />
+		<Parameter Name="Login" Type="VA" Length="20" />
+		<Parameter Name="Password" Type="VA" Length="20" />
+		<Parameter Name="Bonus" Type="I" />
+		<Parameter Name="Malus" Type="I" />
+		<Parameter Name="Admin" Type="B" />
+	</Input>
+</Procedure>

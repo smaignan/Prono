@@ -1,0 +1,15 @@
+<Procedure>
+	<Instruction>
+		<![CDATA[
+		update PRONOSTIC set pro_risques = @Risque
+		where pro_ren_id = @IdMatch and pro_prono < pro_prono_v and pro_uti_id in (
+			select juti_uti_id from JOURNEE_UTILISATEUR where juti_aveugle = false and juti_jou_id = @IdJournee
+		);
+		]]>
+	</Instruction>
+	<Input>
+		<Parameter Name="Risque" Type="I" />
+		<Parameter Name="IdMatch" Type="I" />
+		<Parameter Name="IdJournee" Type="I" />
+	</Input>
+</Procedure>

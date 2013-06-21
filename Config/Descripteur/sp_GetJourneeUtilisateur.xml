@@ -1,0 +1,9 @@
+<Procedure>
+	<Instruction>
+		select * from JOURNEE_UTILISATEUR where juti_jou_id = @IdJournee and juti_uti_id = @IdUtilisateur
+	</Instruction>
+	<Input>
+		<Parameter Name="IdJournee" Type="I" />
+		<Parameter Name="IdUtilisateur" Type="I" />
+	</Input>
+</Procedure>

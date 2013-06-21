@@ -1,0 +1,12 @@
+<Procedure>
+	<Instruction>
+		update PRONOSTIC set pro_risques = 0
+		where pro_ren_id = @IdMatch and pro_uti_id in (
+			select juti_uti_id from JOURNEE_UTILISATEUR where juti_aveugle = true and juti_jou_id = @IdJournee
+		);
+	</Instruction>
+	<Input>
+		<Parameter Name="IdMatch" Type="I" />
+		<Parameter Name="IdJournee" Type="I" />
+	</Input>
+</Procedure>

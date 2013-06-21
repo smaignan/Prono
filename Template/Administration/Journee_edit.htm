@@ -1,0 +1,72 @@
+<script language="javascript">
+function ValidSup(action)
+{
+	if (confirm("Etes vous sûr de vouloir supprimer cette journée ?"))
+	{
+		Valid(action)
+	}
+}
+
+function ValidSupMatch(action, param)
+{
+	if (confirm("Etes vous sûr de vouloir supprimer cette rencontre ?"))
+	{
+		Valid(action, param)
+	}
+}
+
+function ChangeEquipe(objListe)
+{
+	objVisiteur = document.FORMNAME.lbVisiteur;
+	objVisiteur.length = 0;
+	if (objListe.selectedIndex != 0)
+	{
+		for(i=0;i<objListe.options.length;i++)
+		{
+			option = objListe.options[i];
+			if (i != objListe.selectedIndex)
+				objVisiteur.options[objVisiteur.length] = new Option(option.text, option.value);
+		}
+	}
+}
+</script>
+<table>
+	<tr>
+		<td>Numéro :</td>
+		<td><input type="text" name="tbNumero" value="<!--TAG-CHP Numero-->"></td>
+	</tr>
+	<tr>
+		<td>Match retour :</td>
+		<td><input type="checkbox" class="checkbox" name="cbMatchRetour"<!--TAG-CHP MatchRetour-->></td>
+	</tr>
+	<tr>
+		<td>Date de la journée :</td>
+		<td><input type="text" name="tbDateJournee" value="<!--TAG-CHP DateJournee-->"></td>
+	</tr>
+	<tr>
+		<td>Date de fin de saisie :</td>
+		<td><input type="text" name="tbDateFin" value="<!--TAG-CHP DateFin-->"></td>
+	</tr>
+	<tr>
+		<td>Diffuser les pronostics :</td>
+		<td><input type="checkbox" class="checkbox" name="cbDiffuserPronostics"<!--TAG-CHP DiffuserPronostics-->></td>
+	</tr>
+	<tr>
+		<td>Diffuser les résultats :</td>
+		<td><input type="checkbox" class="checkbox" name="cbDiffuserResultats"<!--TAG-CHP DiffuserResultats-->></td>
+	</tr>
+</table>
+<!--TAG-BLC LienAjout-->
+<br>
+<!--TAG-CHP Message-->
+<table width="500" border="0">
+	<!--TAG-BLC LigneAjoutMatch-->
+	<!--TAG-BLC LigneMatch-->
+</table>
+<table>
+	<tr>
+		<td><input type="button" value="Retour" onClick="window.location='?Module=journee'"></td>
+		<td><!--TAG-BLC BoutonSupprimer--></td>
+		<td><input type="button" value="Valider" id="btValider" onClick="Valid('btValider_Click')"></td>
+	</tr>
+</table>

@@ -1,0 +1,20 @@
+<Procedure>
+	<Instruction>
+		INSERT INTO UTILISATEUR 
+		(UTI_NOM, UTI_PRENOM, UTI_PSEUDO, UTI_MAIL, UTI_MAIL2, UTI_LOGIN, UTI_PASSWORD, UTI_BONUS, UTI_MALUS, UTI_ADMIN) 
+		VALUES 
+		(@Nom, @Prenom, @Pseudo, @Mail, @Mail2, @Login, @Password, @Bonus, @Malus, @Admin)
+	</Instruction>
+	<Input>
+		<Parameter Name="Nom" Type="VA" Length="50" />
+		<Parameter Name="Prenom" Type="VA" Length="50" />
+		<Parameter Name="Pseudo" Type="VA" Length="50" />
+		<Parameter Name="Mail2" Type="VA" Length="100" />
+		<Parameter Name="Mail" Type="VA" Length="100" />
+		<Parameter Name="Login" Type="VA" Length="20" />
+		<Parameter Name="Password" Type="VA" Length="20" />
+		<Parameter Name="Bonus" Type="I" />
+		<Parameter Name="Malus" Type="I" />
+		<Parameter Name="Admin" Type="B" />
+	</Input>
+</Procedure>

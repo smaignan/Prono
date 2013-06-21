@@ -1,0 +1,6 @@
+<Procedure>
+	<Instruction>
+		SELECT * FROM JOURNEE ORDER BY JOU_DATE;
+	</Instruction>
+	<Input />
+</Procedure>

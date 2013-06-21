@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no" ?>
+<Modules>
+	<Module id="classement">
+		<Name>Classement</Name>
+		<ControllerPath>Classement.php</ControllerPath>
+		<ViewPath>Classement.php</ViewPath>
+	</Module>
+	<Module id="compte">
+		<Name>Compte</Name>
+		<ControllerPath>Compte.php</ControllerPath>
+		<ViewPath>Compte.php</ViewPath>
+		<Protected />
+	</Module>
+	<Module id="diffuser">
+		<Name>Diffuser</Name>
+		<ControllerPath>Diffuser.php</ControllerPath>
+		<ViewPath>Diffuser.php</ViewPath>
+		<Protected />
+	</Module>
+	<Module id="equipe">
+		<Name>Equipe_lst</Name>
+		<ControllerPath>Administration/Equipe_lst.php</ControllerPath>
+		<ViewPath>Administration/Equipe_lst.php</ViewPath>
+		<TypeAction>ADMINISTRATION</TypeAction>
+		<Protected />
+	</Module>
+	<Module id="journee">
+		<Name>Journee_lst</Name>
+		<ControllerPath>Administration/Journee_lst.php</ControllerPath>
+		<ViewPath>Administration/Journee_lst.php</ViewPath>
+		<TypeAction>ADMINISTRATION</TypeAction>
+		<Protected />
+	</Module>
+	<Module id="journee_edit">
+		<Name>Journee_edit</Name>
+		<ControllerPath>Administration/Journee_edit.php</ControllerPath>
+		<ViewPath>Administration/Journee_edit.php</ViewPath>
+		<TypeAction>ADMINISTRATION</TypeAction>
+		<Protected />
+	</Module>
+	<Module id="login">
+		<Name>Login</Name>
+		<ControllerPath>Login.php</ControllerPath>
+		<ViewPath>Login.php</ViewPath>
+	</Module>
+	<Module id="pronostics">
+		<Name>Pronostics</Name>
+		<ControllerPath>Pronostics.php</ControllerPath>
+		<ViewPath>Pronostics.php</ViewPath>
+	</Module>
+	<Module id="pronostiquer">
+		<Name>Pronostic</Name>
+		<ControllerPath>Pronostic.php</ControllerPath>
+		<ViewPath>Pronostic.php</ViewPath>
+		<Protected />
+	</Module>
+	<Module id="rappel">
+		<Name>Rappel</Name>
+		<ControllerPath>Rappel.php</ControllerPath>
+		<ViewPath />
+	</Module>
+	<Module id="resultat">
+		<Name>Resultat</Name>
+		<ControllerPath>Resultat.php</ControllerPath>
+		<ViewPath>Resultat.php</ViewPath>
+	</Module>
+	<Module id="utilisateur">
+		<Name>Utilisateur_lst</Name>
+		<ControllerPath>Administration/Utilisateur_lst.php</ControllerPath>
+		<ViewPath>Administration/Utilisateur_lst.php</ViewPath>
+		<TypeAction>ADMINISTRATION</TypeAction>
+		<Protected />
+	</Module>
+	<Module id="utilisateur_edit">
+		<Name>Utilisateur_edit</Name>
+		<ControllerPath>Administration/Utilisateur_edit.php</ControllerPath>
+		<ViewPath>Administration/Utilisateur_edit.php</ViewPath>
+		<TypeAction>ADMINISTRATION</TypeAction>
+		<Protected />
+	</Module>
+</Modules>

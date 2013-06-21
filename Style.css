@@ -1,0 +1,504 @@
+/***** menu CSS *****/
+@media print {
+/*A l'impression on cache le menu, marche au moins pour IE, Moz et Opéra.*/
+	.menu, .ssmenu {
+		visibility:hidden;
+	}
+}
+
+.menu, .ssmenu {
+/* Il est important de laisser une largeur, au cas où le Javascript soit désactivé.
+margin aussi */
+	font-size:12px;
+	font-weight:bold;
+	border-left:none;
+	color:white;
+	width:150px;
+	padding:1px;
+	margin:1em;
+}
+.menu {
+	text-align:center;
+	border:none;
+}
+.ssmenu {
+	background:#FFFFFF;
+	overflow:auto;
+	padding:0px;
+	border:1px solid #CDCDCC;
+}
+
+.menu span, .ssmenu span {
+/* pour cacher les ; en fin de <li>, ce qui permet aux synthèse vocales de prendre une
+	pause dans l'élocution */
+	display:none;
+}
+
+.ssmenu ul, .ssmenu li {
+/* Les items (les <li>) des sous-menus, notamment pour enlever les puces des liste */
+	padding:2px 4px 2px 4px;
+	margin:0;
+	list-style-type:none;
+	border-bottom: 1px solid #CDCDCC;
+	border-right: 1px solid #CDCDCC;
+}
+
+.menu a, .ssmenu a, .menu a:visited, .ssmenu a:visited {
+/* Les liens qui ne sont pas sous le curseur. */
+	font-family:Tahoma;
+	text-decoration:none;
+	color:#848484;
+	padding:2px 1px;
+/* Ne pas modifier le block */
+	display:block;
+/*	Un width:100% fait planter Mozilla, sans le width:100% c'est IE et Opera... La combinaison
+	aucun width et height:100% marche sur tous, donc ne pas toucher ces 2 lignes */
+/*	height:100%;
+	margin:0px;*/
+	margin:0px;
+	width:100%;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+}
+html>body .menu a, html>body .menu a:visited, html>body .menu a:hover, html>body .menu a:active,
+html>body .ssmenu a, html>body .ssmenu a:visited, html>body .ssmenu a:hover, html>body .ssmenu a:active {
+	width :auto;
+}
+
+.ssmenu ul:hover, .ssmenu a:hover, .ssmenu a:focus, .menu a:hover, .menu a:focus {
+/* Les liens sous le curseur.
+	On change les couleurs du texte et de fond, et on enlève le soulignement.
+	*/
+	color:#666666;
+	text-decoration:underline;
+}
+
+/*
+Bref... pour résumer, ce qu'il y a à modifier à la base, c'est :
+- couleurs, police, bordure et largeur des menu et ssmenu.
+- l'effet spécial IE pour les ssmenu
+- police et couleurs des liens "non survolés" et "survolés".
+*/
+
+table.menu1
+{
+	border-bottom:solid 1px #666666;
+}
+
+a
+{
+	color:#FF0000;
+}
+
+a:hover
+{
+	color:#6699cc;
+}
+
+body
+{
+	margin:0px;
+	padding:0px;
+	background-color:#FFFFFF;
+	font-family:Arial;
+	font-size:12px;
+}
+
+td
+{
+	font-size:11px;
+}
+
+input.bouton
+{
+	border-style:solid;
+	border-width:1px;
+	border-color:#000000;
+}
+
+input.checkbox
+{
+	border:none;
+}
+
+input
+{
+	font-family:Arial;
+	font-size:11px;
+	border-style:solid;
+	border-width:1px;
+}
+
+select
+{
+	font-family:Arial;
+	font-size:11px;
+	border-style:solid;
+	border-width:1px;
+}
+
+input.onFocus
+{
+	border-style:inset;
+}
+
+.colonneSite
+{
+	
+}
+
+tr.LigneResultats
+{
+	height:22px;
+}
+
+tr.LigneResultats td
+{
+	font-weight:bold;
+	background-color:#E31212;
+	font-size:14px;
+}
+
+tr.LigneResultats input.SaisieScore
+{
+	font-weight:bold;
+	background-color:#E31212;
+	font-size:14px;
+	border:none;
+}
+
+tr.LigneResultats input.SaisieScore_onFocus
+{
+	font-weight:bold;
+	font-size:14px;
+	border-style:inset;
+	text-align:center;
+	border-width:1px;
+	border-color:#000000;
+	background-color:#FFFFFF;
+}
+
+/****** EN TETE ******/
+tr.EnTete
+{
+	background-color:#6E6661;
+	color:#FFFFFF;
+	font-weight:bold;
+}
+
+tr.EnTeteGrille
+{
+	background-color:#393232;
+	color:#FFFFFF;
+	font-weight:normal;
+}
+
+tr.EnTete td
+{
+	padding:3px 6px 3px 6px;
+	text-align:center;
+}
+
+tr.EnTeteGrille td
+{
+	padding:3px 3px 3px 3px;
+	text-align:center;
+	border-left:1px solid #FF0000;
+}
+
+/****** LIGNE PAIRE ******/
+tr.lignePaire
+{
+	background-color:#EFECEA;
+	height:19px;
+}
+
+tr.lignePaire td
+{
+	border-top:1px solid #FF0000;
+	padding:0px 0px 0px 0px;
+}
+
+tr.lignePaire input.SaisieScore
+{
+	text-align:center;
+	border-style:solid;
+	border-width:1px;
+	border-color:#EFECEA;
+	background-color:#EFECEA;
+}
+
+/****** LIGNE PAIRE SELECTED ******/
+tr.lignePaire_Selected
+{
+	background-color:#393232;
+	height:19px;
+}
+
+tr.lignePaire_Selected td
+{
+	border-top:1px solid #FF0000;
+	padding:0px 0px 0px 0px;
+}
+
+tr.lignePaire_Selected td.normal
+{
+	color:#FFFFFF;
+}
+
+tr.lignePaire_Selected td.normal input.SaisieScore
+{
+	text-align:center;
+	border-style:solid;
+	border-width:1px;
+	border-color:#393232;
+	background-color:#393232;
+	color:#FFFFFF;
+}
+
+/****** LIGNE IMPAIRE ******/
+tr.ligneImpaire
+{
+	background-color:#FFFFFF;
+	height:19px;
+}
+
+tr.ligneImpaire td
+{
+	border-top:1px solid #FF0000;
+	padding:0px 0px 0px 0px;
+}
+
+tr.ligneImpaire input.SaisieScore
+{
+	text-align:center;
+	border-style:solid;
+	border-width:1px;
+	border-color:#FFFFFF;
+	background-color:#FFFFFF;
+}
+
+/****** LIGNE IMPAIRE SELECTED ******/
+tr.ligneImpaire_Selected
+{
+	background-color:#393232;
+	height:19px;
+}
+
+tr.ligneImpaire_Selected td
+{
+	border-top:1px solid #FF0000;
+	padding:0px 0px 0px 0px;
+}
+
+tr.ligneImpaire_Selected td.normal
+{
+	color:#FFFFFF;
+}
+
+tr.ligneImpaire_Selected td.normal input.SaisieScore
+{
+	text-align:center;
+	border-style:solid;
+	border-width:1px;
+	border-color:#393232;
+	background-color:#393232;
+	color:#FFFFFF;
+}
+
+/****** LIGNE OVER ******/
+tr.ligne_Over
+{
+	background-color:#F26F11;
+	height:19px;
+}
+
+tr.ligne_Over td.normal, td.risque11, td.risque12, td.risque21, td.risque22, td.risque31, td.risque32, td.risque41, td.risque42, td.risqueAveugle
+{
+	border-top:1px solid #FF0000;
+	padding:0px 0px 0px 0px;
+	background-color:#F26F11;
+}
+
+tr.ligne_Over input.SaisieScore
+{
+	text-align:center;
+	border-style:solid;
+	border-width:1px;
+	border-color:#F26F11;
+	background-color:#F26F11;
+}
+
+input.SaisieScore
+{
+	text-align:center;
+	border-style:solid;
+	border-width:1px;
+	border-color:#EFECEA;
+	background-color:#EFECEA;
+}
+
+input.SaisieScore_onFocus
+{
+	border-style:inset;
+	text-align:center;
+	border-width:1px;
+	border-color:#000000;
+	background-color:#FFFFFF;
+}
+
+tr.ligneEspace td
+{
+	border-top:1px solid #000000;
+	padding:0px;
+}
+
+tr.ligneVictoire td, tr.ligneNul td, tr.ligneDefaite td
+{
+	border-top:1px solid #000000;
+}
+
+tr.ligneDefaite td
+{
+	border-bottom:1px solid #000000;
+}
+
+td.Statistiques
+{
+	text-align:center;
+}
+
+td.normal
+{
+}
+
+td.BonScore
+{
+	background-color:#FFFFCC;
+	border-top:1px solid #FF0000;
+}
+
+td.BonResultat
+{
+	background-color:#CCFFFF;
+	border-top:1px solid #FF0000;
+}
+
+td.risqueAveugle input.SaisieScore
+{
+	text-align:center;
+	border-style:solid;
+	border-width:1px;
+	border-color:#C0C0C0;
+	background-color:#C0C0C0;
+}
+
+td.risqueAveugle
+{
+	background-color:#C0C0C0;
+	border-top:1px solid #FF0000;
+}
+
+td.risque11
+{
+	border-top:1px solid #FF0000;
+	background-color:#00FF00;
+}
+
+td.risque11 input.SaisieScore
+{
+	background-color:#00FF00;
+	border-color:#00FF00;
+	text-align:center;
+}
+
+td.risque12
+{
+	border-top:1px solid #FF0000;
+	background-color:#339966;
+}
+
+td.risque12 input.SaisieScore
+{
+	background-color:#339966;
+	border-color:#339966;
+	text-align:center;
+}
+
+td.risque21
+{
+	border-top:1px solid #FF0000;
+	background-color:#FF9900;
+}
+
+td.risque21 input.SaisieScore
+{
+	background-color:#FF9900;
+	border-color:#FF9900;
+	text-align:center;
+}
+
+td.risque22
+{
+	border-top:1px solid #FF0000;
+	background-color:#FFCC00;
+}
+
+td.risque22 input.SaisieScore
+{
+	background-color:#FFCC00;
+	border-color:#FFCC00;
+	text-align:center;
+}
+
+td.risque31
+{
+	border-top:1px solid #FF0000;
+	background-color:#99CCFF;
+}
+
+td.risque31 input.SaisieScore
+{
+	background-color:#99CCFF;
+	border-color:#99CCFF;
+	text-align:center;
+}
+
+td.risque32
+{
+	border-top:1px solid #FF0000;
+	background-color:#333399;
+}
+
+td.risque32 input.SaisieScore
+{
+	background-color:#333399;
+	border-color:#333399;
+	text-align:center;
+}
+
+td.risque41
+{
+	border-top:1px solid #FF0000;
+	background-color:#FF0000;
+}
+
+td.risque41 input.SaisieScore
+{
+	background-color:#FF0000;
+	border-color:#FF0000;
+	text-align:center;
+}
+
+td.risque42
+{
+	border-top:1px solid #FF0000;
+	background-color:#CC99FF;
+}
+
+td.risque42 input.SaisieScore
+{
+	background-color:#CC99FF;
+	border-color:#CC99FF;
+	text-align:center;
+}

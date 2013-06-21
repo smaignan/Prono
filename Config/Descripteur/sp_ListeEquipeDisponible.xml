@@ -1,0 +1,11 @@
+<Procedure>
+	<Instruction>
+		SELECT * FROM EQUIPE WHERE 
+		EQU_ID NOT IN (SELECT REN_EQU_ID FROM RENCONTRE WHERE REN_JOU_ID = @IdJournee) AND
+		EQU_ID NOT IN (SELECT REN_EQU_ID_V FROM RENCONTRE WHERE REN_JOU_ID = @IdJournee)
+		ORDER BY EQU_NOM
+	</Instruction>
+	<Input>
+		<Parameter Name="IdJournee" Type="I" />
+	</Input>
+</Procedure>

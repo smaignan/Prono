@@ -1,0 +1,8 @@
+<Procedure>
+	<Instruction>
+		SELECT * FROM GRILLE_AVEUGLE where gri_uti_id = @IdUtilisateur order by gri_id
+	</Instruction>
+	<Input>
+		<Parameter Name="IdUtilisateur" Type="I" />
+	</Input>
+</Procedure>

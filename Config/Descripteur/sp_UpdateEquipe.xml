@@ -1,0 +1,11 @@
+<Procedure>
+	<Instruction>
+		UPDATE EQUIPE SET 
+			EQU_NOM = @Nom 
+		WHERE EQU_ID = @Id
+	</Instruction>
+	<Input>
+		<Parameter Name="Id" Type="I" />
+		<Parameter Name="Nom" Type="VA" Length="50" />
+	</Input>
+</Procedure>

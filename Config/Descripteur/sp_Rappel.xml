@@ -1,0 +1,6 @@
+<Procedure>
+	<Instruction>
+		SELECT * FROM JOURNEE WHERE DATEDIFF(CURRENT_TIMESTAMP, JOU_DATE) = -1
+	</Instruction>
+	<Input />
+</Procedure>

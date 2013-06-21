@@ -1,0 +1,9 @@
+<Procedure>
+	<Instruction>
+		delete from PRONOSTIC where pro_ren_id = @Id;\
+		delete from RENCONTRE where ren_id = @Id;
+	</Instruction>
+	<Input>
+		<Parameter Name="Id" Type="I" />
+	</Input>
+</Procedure>

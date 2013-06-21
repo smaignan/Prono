@@ -1,0 +1,8 @@
+<Procedure>
+	<Instruction>
+		call sp_CalculerJournee(@Id)
+	</Instruction>
+	<Input>
+		<Parameter Name="Id" Type="I" />
+	</Input>
+</Procedure>

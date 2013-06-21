@@ -1,0 +1,13 @@
+<Procedure>
+	<Instruction>
+		UPDATE RENCONTRE SET 
+			REN_RESULT = @ScoreEquipe,
+			REN_RESULT_V = @ScoreVisiteur
+		WHERE REN_ID = @Id
+	</Instruction>
+	<Input>
+		<Parameter Name="Id" Type="I" />
+		<Parameter Name="ScoreEquipe" Type="I" />
+		<Parameter Name="ScoreVisiteur" Type="I" />
+	</Input>
+</Procedure>

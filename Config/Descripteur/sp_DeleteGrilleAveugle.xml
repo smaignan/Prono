@@ -1,0 +1,8 @@
+<Procedure>
+	<Instruction>
+		DELETE FROM GRILLE_AVEUGLE where gri_uti_id = @IdUtilisateur
+	</Instruction>
+	<Input>
+		<Parameter Name="IdUtilisateur" Type="I" />
+	</Input>
+</Procedure>

@@ -1,0 +1,72 @@
+<script language="javascript">
+function ValidSup(action)
+{
+	if (confirm("Etes vous sûr de vouloir supprimer cet utilisateur ?"))
+	{
+		Valid(action)
+	}
+}
+
+function GetLogin()
+{
+	if (document.FORMNAME.tbLogin.value == "")
+	{
+		sNom = document.FORMNAME.tbNom.value;
+		sPrenom = document.FORMNAME.tbPrenom.value;
+		if (sNom != "" && sPrenom != "")
+		{
+			sLogin = sPrenom.substring(0, 1) + "." + sNom;
+			document.FORMNAME.tbLogin.value = sLogin;
+		}
+	}
+}
+</script>
+<table>
+	<tr>
+		<td>Nom :</td>
+		<td><input type="text" name="tbNom" value="<!--TAG-CHP Nom-->" maxlength="50" onBlur="GetLogin()"></td>
+	</tr>
+	<tr>
+		<td>Prénom :</td>
+		<td><input type="text" name="tbPrenom" value="<!--TAG-CHP Prenom-->" maxlength="50" onBlur="GetLogin()"></td>
+	</tr>
+	<tr>
+		<td>Pseudo :</td>
+		<td><input type="text" name="tbPseudo" value="<!--TAG-CHP Pseudo-->" maxlength="50"></td>
+	</tr>
+	<tr>
+		<td>Mail :</td>
+		<td><input type="text" name="tbMail" value="<!--TAG-CHP Mail-->" maxlength="100" size="30"></td>
+	</tr>
+	<tr>
+		<td>Mail 2 :</td>
+		<td><input type="text" name="tbMail2" value="<!--TAG-CHP Mail2-->" maxlength="100" size="30"></td>
+	</tr>
+	<tr>
+		<td>Login :</td>
+		<td><input type="text" name="tbLogin" value="<!--TAG-CHP Login-->" maxlength="20"></td>
+	</tr>
+	<tr>
+		<td>Password :</td>
+		<td><input type="text" name="tbPassword" value="<!--TAG-CHP Password-->" maxlength="20"></td>
+	</tr>
+	<tr>
+		<td>Bonus :</td>
+		<td><input type="text" name="tbBonus" value="<!--TAG-CHP Bonus-->" maxlength="4" size="4"></td>
+	</tr>
+	<tr>
+		<td>Malus :</td>
+		<td><input type="text" name="tbMalus" value="<!--TAG-CHP Malus-->" maxlength="4" size="4"></td>
+	</tr>
+	<tr>
+		<td>Administrateur :</td>
+		<td><input type="checkbox" class="checkbox" name="cbAdmin"<!--TAG-CHP Admin-->></td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<td><input type="button" value="Retour" onClick="window.location='?Module=utilisateur'"></td>
+		<td><!--TAG-BLC BoutonSupprimer--></td>
+		<td><input type="button" value="Valider" id="btValider" onClick="Valid('btValider_Click')"></td>
+	</tr>
+</table>

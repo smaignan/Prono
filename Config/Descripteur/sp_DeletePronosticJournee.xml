@@ -1,0 +1,11 @@
+<Procedure>
+	<Instruction>
+		delete from PRONOSTIC where pro_uti_id = @IdUtilisateur and pro_ren_id in (
+			select ren_id from RENCONTRE where ren_jou_id = @IdJournee
+		);
+	</Instruction>
+	<Input>
+		<Parameter Name="IdJournee" Type="I" />
+		<Parameter Name="IdUtilisateur" Type="I" />
+	</Input>
+</Procedure>

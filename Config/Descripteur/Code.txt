@@ -1,0 +1,8 @@
+I  	Integer (entier long)
+N 	Number (réel)
+SI 	Short Integer (entier court)
+BL 	Boolean (booléen)
+A 	Char (caractères alpha de longueur fixe)
+VA 	VarChar (caractères alpha longueur variable avec un maximum)
+D 	Date
+MN 	Money (monnaie)

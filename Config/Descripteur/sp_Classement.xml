@@ -1,0 +1,19 @@
+<Procedure>
+	<Instruction>
+		<![CDATA[
+		select u.*, p.points as points, p.bonus as bonus, p.malus as malus 
+		from UTILISATEUR u 
+			inner join (
+				select juti_uti_id, sum(juti_points) as points, sum(juti_bonus) as bonus, sum(juti_malus) as malus 
+				from JOURNEE_UTILISATEUR ju 
+					inner join JOURNEE j on ju.juti_jou_id = j.jou_id 
+				where j.jou_numero <= @IdJournee 
+				group by juti_uti_id
+			) p on u.uti_id = p.juti_uti_id 
+		order by p.points desc, p.bonus - p.malus desc;
+		]]>
+	</Instruction>
+	<Input>
+		<Parameter Name="IdJournee" Type="I" />
+	</Input>
+</Procedure>

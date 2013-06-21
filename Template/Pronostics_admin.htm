@@ -1,0 +1,43 @@
+<script language="javascript">
+var IdUtilisateur;
+
+function cbAveugle_Change(objCheckbox)
+{
+	if (objCheckbox.checked)
+	{
+		aName = objCheckbox.name.split('_')
+		IdUtilisateur = aName[1]
+	
+		new Ajax.Request('index.php', 
+			{
+				method: 'post',
+				parameters: {Command: 'cbAveugle_Change', IdUtilisateur: IdUtilisateur},
+				onComplete: AfficheGrille
+			}
+		)
+	}
+}
+
+function AfficheGrille(reponse)
+{
+	var docXML = reponse.responseXML
+	var aScore = docXML.getElementsByTagName('score')
+	
+	objLigne = document.getElementById('ligneProno_' + IdUtilisateur)
+	iNbCells = objLigne.cells.length - 2;
+	for(i=1;i<iNbCells;i++)
+	{
+		s_classeScore = "SaisieScore";
+		objText = objLigne.cells[i].childNodes[0]
+		objText.value = aScore[i - 1].firstChild.data
+		ScoreBlur(objText)
+	}
+}
+</script>
+<table>
+	<tr>
+		<td><!--TAG-BLC Journee--></td>
+		<td align="center"><!--TAG-BLC BlocDiffuser--></td>
+	</tr>
+</table>
+<!--TAG-BLC Table-->

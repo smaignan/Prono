@@ -1,0 +1,7 @@
+<BDD>
+	<Driver>MySQL</Driver>
+	<Server>sql.free.fr</Server>
+	<Base>sylvain_maignan</Base>
+	<User>XXXXXX</User>
+	<Password>XXXXXX</Password>
+</BDD>

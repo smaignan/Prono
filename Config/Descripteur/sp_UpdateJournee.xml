@@ -1,0 +1,21 @@
+<Procedure>
+	<Instruction>
+		update JOURNEE set
+			jou_numero = @Numero, 
+			jou_retour = @MatchRetour,
+			jou_date = @DateFin,
+			jou_date_journee = @DateJournee,
+			jou_diffuser_pronostics = @DiffuserPronostics,
+			jou_diffuser_resultats = @DiffuserResultats
+		where jou_id = @Id;
+	</Instruction>
+	<Input>
+		<Parameter Name="Id" Type="I" />
+		<Parameter Name="Numero" Type="I" />
+		<Parameter Name="MatchRetour" Type="B" />
+		<Parameter Name="DateFin" Type="DT" />
+		<Parameter Name="DiffuserPronostics" Type="B" />
+		<Parameter Name="DiffuserResultats" Type="B" />
+		<Parameter Name="DateJournee" Type="DT" />
+	</Input>
+</Procedure>

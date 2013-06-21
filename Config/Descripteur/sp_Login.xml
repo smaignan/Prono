@@ -1,0 +1,9 @@
+<Procedure>
+	<Instruction>
+		SELECT * FROM UTILISATEUR WHERE UTI_LOGIN = @Login AND UTI_PASSWORD = @Password
+	</Instruction>
+	<Input>
+		<Parameter Name="Login" Type="VA" Length="20" />
+		<Parameter Name="Password" Type="VA" Length="20" />
+	</Input>
+</Procedure>

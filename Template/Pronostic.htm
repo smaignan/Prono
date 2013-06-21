@@ -1,0 +1,24 @@
+<script language="javascript">
+function ChangeJournee()
+{
+	Valid('lbJournee_Change');
+}
+</script>
+<select Name="lbJournee" onChange="ChangeJournee()">
+<!--TAG-BLC OptionJournee-->
+</select>
+<table>
+	<tr>
+		<td>Fil rouge :</td>
+		<td><input type="checkbox" class="checkbox" name="cbFilRouge"<!--TAG-CHP FilRouge-->></td>
+	</tr>
+</table>
+<br>
+<table cellspacing="0" width="250">
+	<tr class="EnTete">
+		<td colspan="3">Journée du <!--TAG-CHP Date--></td>
+	</tr>
+	<!--TAG-BLC LigneMatch-->
+</table>
+<br>
+<input type="button" class="bouton" value="Valider" onClick="Valid('btValider_Click')" Id="btValider">

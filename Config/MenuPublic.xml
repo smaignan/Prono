@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no" ?>
+<Menus>
+	<Menu id="classement" Name="Classement" Module="classement" />
+	<Menu id="pronostics" Name="Pronostics" Module="pronostics" />
+	<Menu id="resultat" Name="Résultat" Module="resultat" />
+	<Menu id="login" Name="Connexion" Module="login" />
+</Menus>

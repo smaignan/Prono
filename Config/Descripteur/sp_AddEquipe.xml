@@ -1,0 +1,8 @@
+<Procedure>
+	<Instruction>
+		INSERT INTO EQUIPE (EQU_NOM) VALUES (@Nom)
+	</Instruction>
+	<Input>
+		<Parameter Name="Nom" Type="VA" Length="50" />
+	</Input>
+</Procedure>

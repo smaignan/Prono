@@ -1,0 +1,6 @@
+<Procedure>
+	<Instruction>
+		SELECT * FROM UTILISATEUR ORDER BY UTI_NOM, UTI_PRENOM
+	</Instruction>
+	<Input />
+</Procedure>

@@ -1,0 +1,60 @@
+<script language="javascript">
+function ValidCompte()
+{
+	iNbVictoire = 0;
+	iNbDefaite = 0;
+	iNbNul = 0;
+	
+	aElements = document.getElementsByTagName("INPUT");
+	iNbElement = aElements.length;
+	for (i=0; i<iNbElement; i++)
+	{
+		if (aElements[i].name.substr(0, 8) == "tbGrille")
+		{
+			sValue = aElements[i].value;
+			if (sValue != "")
+			{
+				aValue = sValue.split(' - ')
+				iScore = Math.floor(aValue[0])
+				iScoreVisiteur = Math.floor(aValue[1])
+				if (iScore > iScoreVisiteur)
+				{
+					iNbVictoire++;
+				}
+				else if (iScore < iScoreVisiteur)
+				{
+					iNbDefaite++;
+				}
+				else
+				{
+					iNbNul++;
+				}
+			}
+		}
+	}
+	
+	if (iNbVictoire != 3 || iNbNul != 4 || + iNbDefaite != 3)
+	{
+		alert("Vous devez renseigner : \n    - 3 victoires\n    - 4 nuls\n    - 3 défaites")
+	}
+	else
+	{
+		Valid('btValider_Click')
+	}
+}
+</script>
+<table>
+	<tr>
+		<td>Mot de passe :</td>
+		<td><input type="text" name="tbPassword" value="<!--TAG-CHP Password-->"></td>
+	</tr>
+</table>
+<br>
+<table cellspacing="0" width="200">
+	<tr class="EnTete">
+		<td align="center" colspan="3">Ma grille aveugle</td>
+	</tr>
+	<!--TAG-BLC Ligne-->
+</table>
+<br>
+<input type="button" class="bouton" name="btValider" onClick="javascript:ValidCompte()" value="Valider">

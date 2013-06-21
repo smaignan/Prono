@@ -1,0 +1,12 @@
+<Procedure>
+	<Instruction>
+		INSERT INTO RENCONTRE (REN_EQU_ID, REN_EQU_ID_V, REN_JOU_ID)
+		VALUES
+		(@IdEquipe, @IdVisiteur, @IdJournee)
+	</Instruction>
+	<Input>
+		<Parameter Name="IdEquipe" Type="I" />
+		<Parameter Name="IdVisiteur" Type="I" />
+		<Parameter Name="IdJournee" Type="I" />
+	</Input>
+</Procedure>

@@ -1,0 +1,15 @@
+<Procedure>
+	<Instruction>
+		insert into JOURNEE
+		(jou_numero, jou_retour, jou_date, jou_diffuser_pronostics, jou_diffuser_resultats, jou_date_journee) values 
+		(@Numero, @MatchRetour, @DateFin, @DiffuserPronostics, @DiffuserResultats, @DateJournee);
+	</Instruction>
+	<Input>
+		<Parameter Name="Numero" Type="I" />
+		<Parameter Name="MatchRetour" Type="B" />
+		<Parameter Name="DateFin" Type="DT" />
+		<Parameter Name="DiffuserPronostics" Type="B" />
+		<Parameter Name="DiffuserResultats" Type="B" />
+		<Parameter Name="DateJournee" Type="DT" />
+	</Input>
+</Procedure>

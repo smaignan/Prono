@@ -1,0 +1,17 @@
+<Procedure>
+	<Instruction>
+		<![CDATA[
+		select count(*) as nb, max(jou_numero) as numero from JOURNEE_UTILISATEUR ju 
+			inner join JOURNEE j on ju.juti_jou_id = j.jou_id
+		where jou_retour = @MatchRetour and 
+		juti_uti_id = @IdUtilisateur and 
+		juti_fil_rouge = true and
+		jou_numero <= @IdJournee
+		]]>
+	</Instruction>
+	<Input>
+		<Parameter Name="IdUtilisateur" Type="I" />
+		<Parameter Name="MatchRetour" Type="B" />
+		<Parameter Name="IdJournee" Type="I" />
+	</Input>
+</Procedure>

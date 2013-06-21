@@ -1,0 +1,12 @@
+<Procedure>
+	<Instruction>
+		SELECT p.*, juti_aveugle FROM RENCONTRE r 
+			left outer join PRONOSTIC p on r.ren_id = p.pro_ren_id
+			inner join JOURNEE_UTILISATEUR ju on r.ren_jou_id = ju.juti_jou_id
+		where ren_jou_id = @IdJournee and p.pro_uti_id = @IdUtilisateur		
+	</Instruction>
+	<Input>
+		<Parameter Name="IdJournee" Type="I" />
+		<Parameter Name="IdUtilisateur" Type="I" />
+	</Input>
+</Procedure>

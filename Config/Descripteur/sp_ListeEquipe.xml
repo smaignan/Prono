@@ -1,0 +1,6 @@
+<Procedure>
+	<Instruction>
+		SELECT * FROM EQUIPE ORDER BY EQU_NOM
+	</Instruction>
+	<Input />
+</Procedure>

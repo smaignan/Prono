@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no" ?>
+<Menus>
+	<Menu id="compte" Name="Mon compte" Module="compte" />
+	<Menu id="classement" Name="Classement" Module="classement" />
+	<Menu Name="Pronostics">
+		<SousMenu id="pronostiquer" Name="Mes pronos" Module="pronostiquer" />
+		<SousMenu id="pronostics" Name="Les pronos" Module="pronostics" />
+	</Menu>
+	<Menu id="resultat" Name="Résultat" Module="resultat" />
+	<Menu id="admin" Name="Administration" Type="ADM">
+		<SousMenu id="equipe" Name="Equipe" Module="equipe" />
+		<SousMenu id="utilisateur" Name="Utilisateur" Module="utilisateur" />
+		<SousMenu id="journee" Name="Journée" Module="journee" />
+	</Menu>
+	<Menu id="login" Name="Déconnexion" Module="logout" />
+</Menus>

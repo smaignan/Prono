@@ -1,0 +1,11 @@
+<Procedure>
+	<Instruction>
+		Call sp_Pronostic (@IdMatch, @IdUtilisateur, @ScoreEquipe, @ScoreVisiteur)
+	</Instruction>
+	<Input>
+		<Parameter Name="IdMatch" Type="I" />
+		<Parameter Name="IdUtilisateur" Type="I" />
+		<Parameter Name="ScoreEquipe" Type="I" />
+		<Parameter Name="ScoreVisiteur" Type="I" />
+	</Input>
+</Procedure>

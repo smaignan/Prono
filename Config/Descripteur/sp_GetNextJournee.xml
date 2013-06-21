@@ -1,0 +1,6 @@
+<Procedure>
+	<Instruction>
+		select * from JOURNEE where jou_date_journee = (select min(jou_date_journee) from JOURNEE where jou_date_journee >= now());
+	</Instruction>
+	<Input />
+</Procedure>

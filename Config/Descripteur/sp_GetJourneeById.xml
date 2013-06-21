@@ -1,0 +1,8 @@
+<Procedure>
+	<Instruction>
+		SELECT * FROM JOURNEE WHERE JOU_ID = @Id
+	</Instruction>
+	<Input>
+		<Parameter Name="Id" Type="I" />
+	</Input>
+</Procedure>

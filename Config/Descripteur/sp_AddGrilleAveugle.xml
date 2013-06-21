@@ -1,0 +1,10 @@
+<Procedure>
+	<Instruction>
+		INSERT INTO GRILLE_AVEUGLE (gri_uti_id, gri_prono, gri_prono_v) values (@IdUtilisateur, @ScoreEquipe, @ScoreVisiteur)
+	</Instruction>
+	<Input>
+		<Parameter Name="IdUtilisateur" Type="I" />
+		<Parameter Name="ScoreEquipe" Type="I" />
+		<Parameter Name="ScoreVisiteur" Type="I" />
+	</Input>
+</Procedure>
